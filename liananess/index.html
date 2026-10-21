@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Liananess Beauty Fam – Your beauty plug is open</title>
+<meta name="description" content="Earrings, chains, watches, shower gels and ladies' hair products. Order on WhatsApp. We deliver everywhere at a fee.">
+<meta property="og:title" content="Liananess Beauty Fam">
+<meta property="og:description" content="Your beauty plug is open. Tuma order yako leo.">
+<meta property="og:image" content="img/hero.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Jost:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,700;1,500&display=swap" rel="stylesheet">
+<style>
+:root{--wine:#6b1f3a;--deep:#2e0b1b;--olive:#5b5a1e;--blush:#e8a9b8;--gold:#c9a24b;--cream:#fbf6ec;--ink:#2b1620}
+*{box-sizing:border-box;margin:0}
+body{font:16px/1.6 Jost,system-ui,sans-serif;color:var(--ink);background:var(--cream)}
+img{max-width:100%;display:block}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:'Playfair Display',serif;line-height:1.1}
+h2{color:var(--wine);font-size:clamp(1.7rem,4vw,2.3rem)}
+.script{font-family:'Great Vibes',cursive;line-height:1.2}
+.btn{display:inline-block;background:var(--wine);color:#fff;text-decoration:none;padding:12px 22px;border-radius:999px;font:600 1rem Jost;border:0;cursor:pointer;text-align:center}
+.btn.wa{background:#1f7a4a}.btn.light{background:#fff;color:var(--wine)}
+.btn.ghost{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.55)}
+/* hero (dark, like the Veloria reference) */
+.top{background:radial-gradient(120% 90% at 80% 20%,#7d2a4a 0%,var(--wine) 40%,var(--deep) 100%);color:#fff}
+nav{display:flex;justify-content:space-between;align-items:center;padding:18px 0}
+nav b{font:700 1.1rem 'Playfair Display',serif;letter-spacing:.12em;color:var(--blush)}
+.hero{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center;padding:20px 0 64px}
+.pill{display:inline-block;border:1px solid rgba(255,255,255,.35);border-radius:999px;padding:5px 16px;font-size:.9rem;color:#f3d9e0;margin-bottom:18px}
+.hero h1{font-size:clamp(2.8rem,8vw,5.2rem);font-weight:500}
+.hero .script{font-size:clamp(2.2rem,6vw,3.6rem);color:var(--blush);margin:6px 0 16px}
+.hero p.lead{max-width:36ch;color:#ecd5dc;margin-bottom:26px;font-size:1.1rem}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.arch{border-radius:999px 999px 28px 28px;overflow:hidden;aspect-ratio:3/4;border:2px solid var(--gold);padding:10px;max-width:380px;justify-self:center}
+.arch img{width:100%;height:100%;object-fit:cover;object-position:50% 20%;border-radius:999px 999px 18px 18px}
+.strip{background:var(--gold);color:#2b1a05;text-align:center;padding:9px 16px;font-weight:500}
+section{padding:52px 0}
+/* categories as cards with stock (Glamora reference) */
+.cats{display:flex;gap:12px;overflow-x:auto;padding:6px 2px 14px;scroll-snap-type:x proximity}
+.cat{flex:0 0 150px;scroll-snap-align:start;background:#fff;border:1.5px solid #efe4d3;border-radius:16px;padding:14px;text-align:left;cursor:pointer;font:inherit;color:var(--ink)}
+.cat i{display:grid;place-items:center;width:44px;height:44px;border-radius:12px;background:#f7dfe5;font-style:normal;font-size:1.4rem;margin-bottom:8px}
+.cat b{display:block;font-weight:600}.cat small{color:var(--olive)}
+.cat[aria-pressed=true]{background:var(--wine);color:#fff;border-color:var(--wine)}
+.cat[aria-pressed=true] small{color:#f3d9e0}.cat[aria-pressed=true] i{background:rgba(255,255,255,.18)}
+.row{display:flex;justify-content:space-between;align-items:baseline;margin:34px 0 14px}
+.row span{color:var(--olive);font-size:.95rem}
+/* popular strip (mobile app reference) */
+.pop{display:flex;gap:16px;overflow-x:auto;padding-bottom:10px}
+.pop .card{flex:0 0 200px}
+#q{width:100%;max-width:380px;padding:11px 18px;border:1.5px solid #d9c9b4;border-radius:999px;font:inherit;background:#fff}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:20px;margin-top:16px}
+.card{background:#fff;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;border:1px solid #efe4d3}
+.ph{aspect-ratio:1;background:linear-gradient(135deg,#f6d9e0,#efe2c4);display:grid;place-items:center;position:relative}
+.ph img{width:100%;height:100%;object-fit:cover}
+.ph>span:first-child{font:700 3rem 'Playfair Display',serif;color:#fff;text-shadow:0 2px 8px rgba(107,31,58,.35)}
+.tag{position:absolute;top:10px;left:10px;background:var(--gold);color:#3a2a05;font-size:.8rem;font-weight:600;padding:3px 10px;border-radius:999px}
+.tag.out{background:#555;color:#fff}
+.info{padding:14px;display:flex;flex-direction:column;gap:2px;flex:1}
+.info h3{font-size:1.08rem;color:var(--ink)}
+.c{font-size:.85rem;color:var(--olive)}
+.price{font-weight:600;color:var(--wine);margin:2px 0 10px}
+.add{margin-top:auto;padding:10px;font-size:.95rem}
+.add[disabled]{background:#bbb;cursor:not-allowed}
+.empty{padding:26px 0;color:#7a6a5a}
+/* about */
+.about{display:grid;grid-template-columns:280px 1fr;gap:40px;align-items:center}
+.circle{width:280px;height:280px;border-radius:50%;overflow:hidden;border:6px solid #fff;box-shadow:0 0 0 2px var(--gold)}
+.circle img{width:100%;height:100%;object-fit:cover;transform:scale(1.35);transform-origin:45% 40%}
+.about p{max-width:52ch;margin-top:12px}
+.facts{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+.facts span{background:#fff;border:1px solid #efe4d3;border-radius:999px;padding:6px 14px;font-size:.92rem}
+footer{background:var(--deep);color:#fff;padding:44px 0 90px;text-align:center}
+footer h2{color:#fff}footer .script{color:var(--blush);font-size:2rem}
+footer .btn{margin-top:14px}footer small{display:block;margin-top:22px;opacity:.7}
+/* order drawer (Glamora "Payment Summary" reference, sent to WhatsApp) */
+.bar{position:fixed;left:12px;right:12px;bottom:12px;z-index:20;background:var(--wine);color:#fff;border-radius:999px;padding:12px 22px;display:none;justify-content:space-between;align-items:center;border:0;font:600 1rem Jost;cursor:pointer;box-shadow:0 8px 24px rgba(0,0,0,.3);max-width:520px;margin:auto}
+.bar.on{display:flex}
+.sheet{position:fixed;inset:0;z-index:30;background:rgba(30,8,18,.55);display:none}
+.sheet.on{display:block}
+.panel{position:absolute;background:#fff;display:flex;flex-direction:column;right:0;top:0;bottom:0;width:min(420px,100%);padding:20px}
+.panel h3{color:var(--wine);font-size:1.5rem;margin-bottom:4px}
+#lines{flex:1;overflow:auto;margin:12px 0}
+.line{display:grid;grid-template-columns:1fr auto;gap:2px 10px;padding:12px 0;border-bottom:1px solid #f0e6d8}
+.line b{font-weight:600}.qty{display:flex;align-items:center;gap:8px;grid-column:1}
+.qty button{width:30px;height:30px;border-radius:50%;border:1.5px solid var(--wine);background:#fff;color:var(--wine);font-size:1.1rem;cursor:pointer}
+.tot{display:flex;justify-content:space-between;font:600 1.15rem Jost;padding:12px 0 4px}
+.note{font-size:.88rem;color:#6a5a4a;margin-bottom:12px}
+.x{align-self:flex-end;background:none;border:0;font-size:1.6rem;cursor:pointer;color:var(--wine)}
+@media(max-width:760px){.hero,.about{grid-template-columns:1fr}.about{justify-items:center;text-align:center}.facts{justify-content:center}.grid{grid-template-columns:repeat(2,1fr);gap:12px}.pop .card{flex-basis:170px}.panel{top:auto;width:100%;max-height:85vh;border-radius:22px 22px 0 0}}
+@media(prefers-reduced-motion:no-preference){.card{transition:transform .2s}.card:hover{transform:translateY(-3px)}}
+</style>
+</head>
+<body>
+
+<div class="top">
+ <div class="wrap">
+  <nav><b>LIANANESS BEAUTY FAM</b><a class="btn light" id="hdrWa" href="#">WhatsApp</a></nav>
+  <div class="hero">
+   <div>
+    <span class="pill">Earrings · Chains · Watches · Body care · Hair</span>
+    <h1>Your beauty plug is open</h1>
+    <p class="script">Tuma order yako leo</p>
+    <p class="lead">Pick what you love, add it to your order, and send it to Liana on WhatsApp in one tap.</p>
+    <div class="cta"><a class="btn light" href="#shop">Shop the catalog</a><a class="btn ghost" href="#about">Meet Liana</a></div>
+   </div>
+   <div class="arch"><img src="img/hero.jpg" alt="Liana in a pink sparkle dress and gold watch" width="372" height="560"></div>
+  </div>
+ </div>
+</div>
+<div class="strip">We deliver everywhere at a fee</div>
+
+<main>
+<section id="shop"><div class="wrap">
+  <h2>Shop by category</h2>
+  <div class="cats" id="cats" role="group" aria-label="Categories"></div>
+  <div id="popBox"><div class="row"><h2>Popular right now</h2></div><div class="pop" id="pop"></div></div>
+  <div class="row"><h2 id="listTitle">All products</h2><span id="count"></span></div>
+  <input id="q" type="search" placeholder="Search earrings, watches, hair..." aria-label="Search products">
+  <div class="grid" id="grid" aria-live="polite"></div>
+</div></section>
+
+<section id="about"><div class="wrap about">
+  <div class="circle"><img src="img/portrait.jpg" alt="Portrait of Liana, owner of Liananess Beauty Fam"></div>
+  <div>
+   <h2>Meet Liana</h2>
+   <p>Liananess Beauty Fam is a small shop built on good taste. Every piece is chosen to help you feel confident, whether it is a pair of earrings for the weekend or a new hair product for the week ahead.</p>
+   <div class="facts"><span>Order by WhatsApp</span><span>Delivery countrywide, at a fee</span><span>New items added often</span></div>
+  </div>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+  <h2>Ready to order?</h2><p class="script">Tuma order yako leo</p>
+  <a class="btn light" id="footWa" href="#">Message Liana on WhatsApp</a>
+  <small>© Liananess Beauty Fam</small>
+</div></footer>
+
+<button class="bar" id="bar"><span id="barN"></span><span id="barT"></span></button>
+<div class="sheet" id="sheet"><div class="panel" role="dialog" aria-label="Your order">
+  <button class="x" id="close" aria-label="Close">×</button>
+  <h3>Your order</h3><p class="note">Delivery is charged separately. Liana will confirm the fee on WhatsApp.</p>
+  <div id="lines"></div>
+  <div class="tot"><span>Total</span><span id="total"></span></div>
+  <a class="btn wa" id="send" href="#">Send order on WhatsApp</a>
+</div></div>
+
+<script>
+/* ======= SETTINGS ======= */
+const WHATSAPP = "254769529619"; // international format, no + or spaces
+const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbz06GRGOwCYIWUZlJwL4YcS7hTfcBODgNjAIOKhaeJ-Xq9s5dmXz3c_TbUShYUUX04ECw/exec";      // best: your Apps Script Web app URL (updates show instantly, lets you use admin.html)
+const SHEET_CSV = "";            // alternative: Google Sheet "Publish to web" CSV link (can lag a few minutes)
+/* ======================== */
+const SAMPLE = [
+ {name:"Black Flower Stud Earrings",category:"Earrings",price:"",image:"img/earrings-black-flower.jpg",available:"yes",badge:"New"},
+ {name:"Checkered Drop Earrings",category:"Earrings",price:"",image:"img/earrings-checkered.jpg",available:"yes",badge:""},
+ {name:"Pearl Gold Stud Earrings",category:"Earrings",price:"",image:"img/earrings-pearl.jpg",available:"yes",badge:"New"},
+ {name:"Gold Twist Hoop Earrings (Stainless Steel)",category:"Earrings",price:"",image:"img/earrings-gold-twist.jpg",available:"yes",badge:""},
+ {name:"Master Passion Fruit Shower Gel",category:"Shower & Body",price:"",image:"img/shower-gel-passion-fruit.jpg",available:"yes",badge:"New"}
+];
+const ICON={earrings:"✨",chains:"⛓️",watches:"⌚",shower:"🧴",body:"🧴",hair:"💇🏾‍♀️"};
+const $=id=>document.getElementById(id);
+const waLink=m=>`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(m)}`;
+["hdrWa","footWa"].forEach(id=>$(id).href=waLink("Hi Liananess, I saw your catalog and I'd like to order."));
+const esc=s=>String(s).replace(/[&<>"]/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[m]));
+const num=p=>Number(String(p.price||"").replace(/[^\d.]/g,""))||0;
+const ksh=n=>"KSh "+n.toLocaleString();
+const isOut=p=>/^(no|n|sold|out)/i.test(p.available||"yes");
+let products=[],cat="All",term="",cart={};
+
+function parseCSV(t){const rows=[];let r=[],c="",q=false;
+ for(let i=0;i<t.length;i++){const ch=t[i];
+  if(q){if(ch=='"'&&t[i+1]=='"'){c+='"';i++}else if(ch=='"')q=false;else c+=ch}
+  else if(ch=='"')q=true;else if(ch==','){r.push(c);c=""}
+  else if(ch=='\n'||ch=='\r'){if(ch=='\r'&&t[i+1]=='\n')i++;r.push(c);c="";rows.push(r);r=[]}else c+=ch}
+ if(c||r.length){r.push(c);rows.push(r)}
+ const h=rows.shift().map(x=>x.trim().toLowerCase());
+ return rows.filter(x=>x.some(v=>v.trim())).map(x=>Object.fromEntries(h.map((k,i)=>[k,(x[i]||"").trim()])))}
+
+function cardHTML(p){const i=products.indexOf(p),out=isOut(p);
+ const tag=out?`<span class="tag out">Sold out</span>`:(p.badge?`<span class="tag">${esc(p.badge)}</span>`:"");
+ const pic=p.image?`<img src="${esc(p.image)}" alt="${esc(p.name)}" loading="lazy">`:`<span>${esc(p.name[0]||"L")}</span>`;
+ return `<article class="card"><div class="ph">${pic}${tag}</div><div class="info"><span class="c">${esc(p.category||"")}</span><h3>${esc(p.name)}</h3><div class="price">${p.price?ksh(num(p)):"Ask for price"}</div><button class="btn add" data-i="${i}" ${out?"disabled":""}>${out?"Sold out":"Add to order"}</button></div></article>`}
+
+function render(){
+ const names=[...new Set(products.map(p=>p.category).filter(Boolean))];
+ $("cats").innerHTML=["All",...names].map(c=>{const n=products.filter(p=>(c==="All"||p.category===c)&&!isOut(p)).length;
+  const ic=c==="All"?"🛍️":(ICON[Object.keys(ICON).find(k=>c.toLowerCase().includes(k))]||"💄");
+  return `<button class="cat" data-c="${esc(c)}" aria-pressed="${c===cat}"><i>${ic}</i><b>${esc(c)}</b><small>${n} in stock</small></button>`}).join("");
+ const pops=products.filter(p=>p.badge&&!isOut(p));
+ $("popBox").style.display=pops.length&&cat==="All"&&!term?"":"none";
+ $("pop").innerHTML=pops.map(cardHTML).join("");
+ const list=products.filter(p=>(cat==="All"||p.category===cat)&&(p.name+" "+p.category).toLowerCase().includes(term));
+ $("listTitle").textContent=cat==="All"?"All products":cat;$("count").textContent=list.length+" items";
+ $("grid").innerHTML=list.length?list.map(cardHTML).join(""):`<p class="empty">Nothing matches that search yet. Message Liana on WhatsApp and she can help.</p>`;
+}
+
+function renderCart(){
+ const ids=Object.keys(cart).filter(i=>cart[i]>0);
+ const n=ids.reduce((s,i)=>s+cart[i],0),t=ids.reduce((s,i)=>s+cart[i]*num(products[i]),0);
+ $("bar").classList.toggle("on",n>0);$("barN").textContent=`View order (${n})`;$("barT").textContent=ksh(t);
+ $("lines").innerHTML=ids.length?ids.map(i=>{const p=products[i];return `<div class="line"><b>${esc(p.name)}</b><span>${ksh(cart[i]*num(p))}</span><div class="qty"><button data-m="${i}" aria-label="Remove one">−</button><span>${cart[i]}</span><button data-p="${i}" aria-label="Add one">+</button></div></div>`}).join(""):`<p class="empty">Your order is empty. Add something you love.</p>`;
+ $("total").textContent=ksh(t);
+ const msg="Hi Liananess, I'd like to order:\n"+ids.map(i=>`- ${cart[i]} x ${products[i].name}${num(products[i])?` (${ksh(cart[i]*num(products[i]))})`:""}`).join("\n")+`${t?`\nTotal: ${ksh(t)}`:""}\nPlease confirm the delivery fee and payment details.`;
+ $("send").href=ids.length?waLink(msg):"#";
+ if(!ids.length)$("sheet").classList.remove("on");
+}
+
+document.addEventListener("click",e=>{
+ const a=e.target.closest(".add");if(a){cart[a.dataset.i]=(cart[a.dataset.i]||0)+1;renderCart();return}
+ const c=e.target.closest(".cat");if(c){cat=c.dataset.c;render();return}
+ const m=e.target.closest("[data-m]");if(m){cart[m.dataset.m]--;renderCart();return}
+ const p=e.target.closest("[data-p]");if(p){cart[p.dataset.p]++;renderCart();return}
+ if(e.target.closest("#bar"))$("sheet").classList.add("on");
+ if(e.target.id==="sheet"||e.target.id==="close")$("sheet").classList.remove("on");
+});
+$("q").addEventListener("input",e=>{term=e.target.value.toLowerCase().trim();render()});
+
+(async()=>{products=SAMPLE;
+ if(APPS_SCRIPT_URL){try{const r=await fetch(APPS_SCRIPT_URL+"?t="+Date.now());const rows=((await r.json()).products||[]).filter(p=>p.name);if(rows.length)products=rows}catch(e){console.warn("Apps Script not loaded, showing samples")}}
+ else if(SHEET_CSV){try{const r=await fetch(SHEET_CSV);if(!r.ok)throw 0;const rows=parseCSV(await r.text()).filter(p=>p.name);if(rows.length)products=rows}catch(e){console.warn("Sheet not loaded, showing samples")}}
+ render();renderCart();})();
+</script>
+</body>
+</html>
